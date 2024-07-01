@@ -31,7 +31,7 @@ const locations = [
     name: "-41.2829895, 174.7765351",
     lat: -41.2829895,
     lng: 174.7765351,
-    imageSrc: "/images/3091.jpeg",
+    imageSrc: "/land/images/3091.jpeg",
     imageAlt: "Birds sitting on top of office building",
   },
 ];
