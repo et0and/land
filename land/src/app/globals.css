@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'leaflet/dist/leaflet.css';
+
+@layer components {
+  .custom-popup .leaflet-popup-content-wrapper {
+    @apply rounded-lg shadow-lg;
+  }
+
+  .custom-popup .leaflet-popup-close-button {
+    @apply text-gray-600 hover:text-gray-800 transition-colors duration-200 ease-in-out;
+    @apply w-14 h-14 text-xl leading-8;
+    @apply top-4 right-4;
+  }
+
+  .custom-popup .leaflet-popup-close-button:hover {
+    @apply bg-gray-200 rounded-full;
+  }
+}
