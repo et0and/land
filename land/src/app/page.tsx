@@ -34,6 +34,14 @@ const locations = [
     imageSrc: "/land/images/3091.jpeg",
     imageAlt: "Birds sitting on top of office building",
   },
+  {
+  id: "4",
+  name: "-36.8660046, 174.7422192",
+  lat: -36.8660046,
+  lng: 174.7422192,
+  imageSrc: "/land/images/3231.jpeg",
+  imageAlt: "A handsome, young, successful man points at a computer screen with the Discord app open.",
+  },
 ];
 
 export default function Home() {
