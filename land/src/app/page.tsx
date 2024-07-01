@@ -17,7 +17,6 @@ const locations = [
     lat: -41.2802,
     lng: 174.775696,
     videoSrc: "/land/video/test.mp4",
-    description: "Filmed Tuesday 2 July, 2024.",
   },
   {
     id: "2",
