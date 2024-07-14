@@ -1,8 +1,13 @@
 "use client";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import MapIcon from "./MapIcon";
+
+import dynamic from 'next/dynamic';
 import Image from "next/image";
+import MapIcon from "./MapIcon";
+
+const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import('react-leaflet').then(mod => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import('react-leaflet').then(mod => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import('react-leaflet').then(mod => mod.Popup), { ssr: false });
 
 type Location = {
   id: string;
@@ -11,10 +16,9 @@ type Location = {
   lng: number;
   audioSrc?: string;
   videoSrc?: string;
-  imageSrc?: string; // Optional image source
-  imageAlt?: string; // Optional image alt text
-
-  description?: string; // Optional description, if needed
+  imageSrc?: string;
+  imageAlt?: string;
+  description?: string;
 };
 
 type MapProps = {
@@ -44,10 +48,10 @@ const Map: React.FC<MapProps> = ({ locations }) => {
                   <div className="mb-2">
                     <Image
                       src={location.imageSrc}
-                      alt={location.imageAlt}
+                      alt={location.imageAlt || ''}
                       width={300}
                       height={150}
-                      objectFit="cover"
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
                 )}
