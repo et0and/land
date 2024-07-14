@@ -44,7 +44,7 @@ const Map: React.FC<MapProps> = ({ locations }) => {
                   <div className="mb-2">
                     <Image
                       src={location.imageSrc}
-                      alt={location.imageAlt || location.name}
+                      alt={location.imageAlt}
                       width={300}
                       height={150}
                       objectFit="cover"
