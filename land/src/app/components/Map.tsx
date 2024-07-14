@@ -5,7 +5,7 @@ import MapIcon from "./MapIcon";
 import Image from "next/image";
 
 type Location = {
-  id?: string;
+  id: string;
   name?: string;
   lat: number;
   lng: number;
