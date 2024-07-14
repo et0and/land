@@ -5,8 +5,8 @@ import MapIcon from "./MapIcon";
 import Image from "next/image";
 
 type Location = {
-  id: string;
-  name: string;
+  id?: string;
+  name?: string;
   lat: number;
   lng: number;
   audioSrc?: string;
@@ -26,7 +26,7 @@ const Map: React.FC<MapProps> = ({ locations }) => {
     <>
       <MapIcon />
       <MapContainer
-        center={[-41.184442, 174.94956]}
+        center={[-38.944991, 176.090999]}
         zoom={7}
         style={{ height: "100vh", width: "100%" }}
         minZoom={4}
